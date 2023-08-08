@@ -1,0 +1,21 @@
+project:
+  language: Javascript
+  framework:
+    name: "NestJs"
+    version: 8
+  mainFile: "package.json"
+  unitTestFramework: "NUnit"
+  unitTestFolder: ""
+  dockerPath: ""
+vars:
+  development:
+  quality:
+  production:
+secrets:
+  development:
+  quality:
+  production:
+docker-args:
+  development:
+  quality:
+  production:

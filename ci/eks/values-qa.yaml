@@ -1,0 +1,127 @@
+replicaCount: 1
+
+serviceAccount: currency-exchange-pj-qa-sa
+
+volumes:
+  list:
+  - name: secrets-store-inline
+    csi:
+      driver: secrets-store.csi.k8s.io
+      readOnly: true
+      volumeAttributes:
+        secretProviderClass: "secrets-provider-currency-exchange-pj"
+
+nameOverride: ""
+fullnameOverride: ""
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+
+container:
+  image:
+    pullPolicy: Always
+  ports:
+    - name: http
+      containerPort: 3010
+      protocol: TCP
+  volumeMounts:
+    list:
+     - name: secrets-store-inline
+       mountPath: "/mnt/secrets-store"
+       readOnly: true
+
+vars:
+  enabled: true
+  list:
+    - name: PORT
+      value: "3010"
+    - name: LOGGER_LEVEL
+      value: "trace"
+    - name: NODE_OPTIONS
+      value: "--use-openssl-ca"
+    - name: PATH_INNER_BCL
+      value: "https://gw.sb.apis.itauchile2.cl/inner/bcl/currency-exchange/v1"
+    - name: INNER_BCL_CLIENT_ID
+      value: "3eaa68b4ef61ef40b7a719cb46265f23"
+    - name: ENVIRONMENT
+      value: "qa"
+    - name: TYPE
+      value: "bff"
+    - name: COMPONENT
+      value: "bff-currency-exchange-pj: 0.0.1"
+    - name: APP_ID
+      value: "2198"
+    - name: INNER_BCL_CLIENT_SECRET
+      valueFrom:
+        secretKeyRef:
+          name: secrets-qa-bff-currency-exchange-pj
+          key: bcl-apikey
+    - name: PATH_INNER_ACL
+      value: "https://apiinqa.itauchile2.cl/inner/acl/currency-exchange-forex/v1/search-historical-records/execute/"
+    - name: APPLICATIONS
+      value: "PORTAL" 
+    - name: INNER_ACL_CLIENT_ID
+      value: "c9be9d1ad0619a8fbcb74add1e7909d8"
+    - name: INNER_ACL_CLIENT_SECRET
+      valueFrom:
+        secretKeyRef:
+          name: secrets-qa-bff-currency-exchange-pj
+          key: acl-apikey
+
+secrets:
+
+livenessEnabled: true
+livenessProbe:
+  httpGet:
+    path: /health
+    port: http
+  initialDelaySeconds: 5
+  periodSeconds: 10
+
+readinessEnabled: true
+readinessProbe:
+  httpGet:
+    path: /health
+    port: http
+  initialDelaySeconds: 5
+  periodSeconds: 10
+
+service: #PR-PREGUNTAR a CLOUDOPS
+  type: ClusterIP
+  port: 3010 
+
+ingress:
+  ingressClassName: ingress-internal
+  enabled: true
+  annotations:
+    alb.ingress.kubernetes.io/target-type: 'ip'
+    alb.ingress.kubernetes.io/scheme: internal
+    alb.ingress.kubernetes.io/group.name: alb-qa-bff-priv
+    alb.ingress.kubernetes.io/healthchek-path: /health
+  rules:
+    host: bfftesoreriapj-2109.bff-qa-ms.clouditauchile.cl
+    path: "/"
+
+resources:
+  limits:
+    cpu: 270m
+    memory: 479Mi
+  requests:
+    cpu: 103m
+    memory: 220Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 60
+  #targetMemoryUtilizationPercentage: 70

@@ -1,0 +1,333 @@
+[{
+    "_id": "648b486554e53243a2b4b4ec",
+    "category": "Comercial",
+    "description": "Crédito orientado fines generales del deudor.",
+    "productType": "Loan",
+    "options": [
+        {
+            "_id": "648b486554e53243a2b4b4ec",
+            "productName": "Pagos iguales CLP",
+            "description": "Crédito con pagos iguales",
+            "isActive": true,
+            "rateType": "Fixed",
+            "structure": "EqualPayments",
+            "dayCounter": "Thirty360",
+            "compounding": "Compounded",
+            "allowPartialDisbursements": false,
+            "currency": "CLP",
+            "minNotional": 1,
+            "maxNotional": 10000000000,
+            "minStartTenor": "1D",
+            "maxStartTenor": "90D",
+            "maxEndTenor": "20Y",
+            "discountCurve": "CF_CLP",
+            "forecastCurves": [],
+            "paymentFrequencies": [
+                "Monthly",
+                "Quarterly",
+                "Semiannual",
+                "Annual"
+            ]
+        },
+        {
+            "_id": "648b486554e53243a2b4b4ed",
+            "productName": "Pagos iguales UF",
+            "rateType": "Fixed",
+            "isActive": true,
+            "structure": "EqualPayments",
+            "dayCounter": "Thirty360",
+            "compounding": "Compounded",
+            "allowPartialDisbursements": false,
+            "minNotional": 1,
+            "maxNotional": 500000,
+            "minStartTenor": "1D",
+            "maxStartTenor": "90D",
+            "maxEndTenor": "20Y",
+            "discountCurve": "CF_UF",
+            "forecastCurves": [],
+            "currency": "CLF",
+            "description": "Crédito con pagos iguales",
+            "paymentFrequencies": [
+                "Monthly",
+                "Quarterly",
+                "Semiannual",
+                "Annual"
+            ]
+        },
+        {
+            "_id": "648b486554e53243a2b4b4ef",
+            "productName": "Pagos iguales USD",
+            "rateType": "Fixed",
+            "isActive": true,
+            "structure": "EqualPayments",
+            "dayCounter": "Thirty360",
+            "compounding": "Compounded",
+            "allowPartialDisbursements": false,
+            "currency": "USD",
+            "minNotional": 1,
+            "maxNotional": 10000000,
+            "minStartTenor": "1D",
+            "maxStartTenor": "90D",
+            "maxEndTenor": "20Y",
+            "discountCurve": "CF_USD_SINT",
+            "description": "Crédito con pagos iguales",
+            "forecastCurves": [],
+            "paymentFrequencies": [
+                "Monthly",
+                "Quarterly",
+                "Semiannual",
+                "Annual"
+            ]
+        },
+        {
+            "_id": "648b486554e53243a2b4b4f0",
+            "productName": "Crédito CLP con perfil irregular",
+            "description": "Pagos irregulares",
+            "rateType": "Fixed",
+            "isActive": true,
+            "structure": "CustomFixedRate",
+            "dayCounter": "Actual360",
+            "compounding": "Simple",
+            "currency": "CLP",
+            "allowPartialDisbursements": false,
+            "minNotional": 1,
+            "maxNotional": 10000000000,
+            "minStartTenor": "1D",
+            "maxStartTenor": "90D",
+            "maxEndTenor": "20Y",
+            "discountCurve": "CF_CLP",
+            "forecastCurves": [],
+            "paymentFrequencies": [
+                "OtherFrequency"
+            ]
+        },
+        {
+            "_id": "648b486554e53243a2b4b4f1",
+            "productName": "Crédito UF con perfil irregular",
+            "description": "Crédito que permite el ingreso de estructuras de pagos irregulares",
+            "rateType": "Fixed",
+            "isActive": true,
+            "structure": "CustomFixedRate",
+            "dayCounter": "Actual360",
+            "compounding": "Simple",
+            "currency": "CLF",
+            "allowPartialDisbursements": false,
+            "minNotional": 1,
+            "maxNotional": 500000,
+            "minStartTenor": "1D",
+            "maxStartTenor": "90D",
+            "maxEndTenor": "20Y",
+            "discountCurve": "CF_UF",
+            "forecastCurves": [],
+            "paymentFrequencies": [
+                "OtherFrequency"
+            ]
+        },
+        {
+            "_id": "648b486554e53243a2b4b4f2",
+            "productName": "Crédito USD con perfil irregular",
+            "description": "Crédito que permite el ingreso de estructuras de pagos irregulares",
+            "rateType": "Fixed",
+            "isActive": true,
+            "structure": "CustomFixedRate",
+            "dayCounter": "Actual360",
+            "compounding": "Simple",
+            "currency": "USD",
+            "allowPartialDisbursements": false,
+            "minNotional": 1,
+            "maxNotional": 10000000,
+            "minStartTenor": "1D",
+            "maxStartTenor": "90D",
+            "maxEndTenor": "20Y",
+            "discountCurve": "CF_USD_SINT",
+            "forecastCurves": [],
+            "paymentFrequencies": [
+                "OtherFrequency"
+            ]
+        },
+        {
+            "_id": "648b486554e53243a2b4b4f3",
+            "productName": "Crédito CLP con perfil irregular",
+            "description": "Crédito que permite el ingreso de estructuras de pagos irregulares",
+            "rateType": "Floating",
+            "isActive": true,
+            "structure": "CustomFloatingRate",
+            "dayCounter": "Actual360",
+            "compounding": "Simple",
+            "allowPartialDisbursements": true,
+            "currency": "CLP",
+            "minNotional": 1,
+            "maxNotional": 10000000000,
+            "minStartTenor": "1D",
+            "maxStartTenor": "90D",
+            "maxEndTenor": "20Y",
+            "discountCurve": "CF_CLP",
+            "paymentFrequencies": [],
+            "forecastCurves": [
+                {
+                    "curveName": "ICP",
+                    "forecastCurve": "ICP",
+                    "fixingFrequency": "OtherFrequency"
+                },
+                {
+                    "curveName": "ICP1M",
+                    "forecastCurve": "ICP",
+                    "fixingFrequency": "Monthly"
+                },
+                {
+                    "curveName": "ICP3M",
+                    "forecastCurve": "ICP",
+                    "fixingFrequency": "Quarterly"
+                },
+                {
+                    "curveName": "ICP6M",
+                    "forecastCurve": "ICP",
+                    "fixingFrequency": "Semiannual"
+                },
+                {
+                    "curveName": "ICP12M",
+                    "forecastCurve": "ICP",
+                    "fixingFrequency": "Annual"
+                },
+                {
+                    "curveName": "TABCLP1M",
+                    "forecastCurve": "TABCLP1M",
+                    "fixingFrequency": "Monthly"
+                },
+                {
+                    "curveName": "TABCLP3M",
+                    "forecastCurve": "TABCLP3M",
+                    "fixingFrequency": "Quarterly"
+                },
+                {
+                    "curveName": "TABCLP6M",
+                    "forecastCurve": "TABCLP6M",
+                    "fixingFrequency": "Semiannual"
+                },
+                {
+                    "curveName": "TABCLP12M",
+                    "forecastCurve": "TABCLP12M",
+                    "fixingFrequency": "Annual"
+                }
+            ]
+        },
+        {
+            "_id": "648b486554e53243a2b4b4f4",
+            "productName": "Crédito UF con perfil irregular",
+            "description": "Crédito que permite el ingreso de estructuras de pagos irregulares",
+            "rateType": "Floating",
+            "isActive": true,
+            "structure": "CustomFloatingRate",
+            "dayCounter": "Actual360",
+            "compounding": "Simple",
+            "allowPartialDisbursements": true,
+            "minNotional": 1,
+            "maxNotional": 500000,
+            "minStartTenor": "1D",
+            "maxStartTenor": "90D",
+            "currency": "CLF",
+            "maxEndTenor": "20Y",
+            "discountCurve": "CF_UF",
+            "paymentFrequencies": [],
+            "forecastCurves": [
+                {
+                    "curveName": "TABUF1M",
+                    "forecastCurve": "TABUF1M",
+                    "fixingFrequency": "Monthly"
+                },
+                {
+                    "curveName": "TABUF3M",
+                    "forecastCurve": "TABUF3M",
+                    "fixingFrequency": "Quarterly"
+                },
+                {
+                    "curveName": "TABUF6M",
+                    "forecastCurve": "TABUF6M",
+                    "fixingFrequency": "Semiannual"
+                },
+                {
+                    "curveName": "TABUF12M",
+                    "forecastCurve": "TABUF12M",
+                    "fixingFrequency": "Annual"
+                }
+            ]
+        },
+        {
+            "_id": "648b486554e53243a2b4b4f5",
+            "productName": "Crédito USD con perfil irregular",
+            "description": "Crédito que permite el ingreso de estructuras de pagos irregulares",
+            "rateType": "Floating",
+            "isActive": true,
+            "structure": "CustomFloatingRate",
+            "dayCounter": "Actual360",
+            "compounding": "Simple",
+            "allowPartialDisbursements": true,
+            "currency": "USD",
+            "minNotional": 1,
+            "maxNotional": 10000000,
+            "minStartTenor": "1D",
+            "maxStartTenor": "90D",
+            "maxEndTenor": "20Y",
+            "discountCurve": "CF_USD_OPT",
+            "paymentFrequencies": [],
+            "forecastCurves": [
+                {
+                    "curveName": "SOFR",
+                    "forecastCurve": "SOFR",
+                    "fixingFrequency": "OtherFrequency"
+                },
+                {
+                    "curveName": "TERMSOFR1M",
+                    "forecastCurve": "SOFR",
+                    "fixingFrequency": "Monthly"
+                },
+                {
+                    "curveName": "TERMSOFR3M",
+                    "forecastCurve": "SOFR",
+                    "fixingFrequency": "Quarterly"
+                },
+                {
+                    "curveName": "TERMSOFR6M",
+                    "forecastCurve": "SOFR",
+                    "fixingFrequency": "Semiannual"
+                },
+                {
+                    "curveName": "TERMSOFR12M",
+                    "forecastCurve": "SOFR",
+                    "fixingFrequency": "Annual"
+                }
+            ]
+        }
+    ]
+},
+{
+    "_id": "648b4b8f54e53243a2b4b4f7",
+    "category": "Hipotecario",
+    "description": "Crédito orientado a compras de viviendas.",
+    "productType": "Loan",
+    "options": [
+        {
+            "_id": "648b4b8f54e53243a2b4b4f8",
+            "productName": "Hipotecario en UF",
+            "description": "Crédito hipotecario para persona fisica.",
+            "rateType": "Fixed",
+            "isActive": true,
+            "structure": "EqualPayments",
+            "dayCounter": "Thirty360",
+            "compounding": "Compounded",
+            "allowPartialDisbursements": false,
+            "currency": "CLF",
+            "minNotional": 1,
+            "maxNotional": 10000000000,
+            "minStartTenor": "1D",
+            "maxStartTenor": "30D",
+            "maxEndTenor": "30Y",
+            "discountCurve": "CF_UF_HIPOTECARIO",
+            "forecastCurves": [],
+            "paymentFrequencies": [
+                "Monthly"
+            ]
+        }
+    ]
+}
+]

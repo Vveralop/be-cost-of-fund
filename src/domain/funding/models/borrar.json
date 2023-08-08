@@ -1,0 +1,3233 @@
+{
+    "refDate": "2023-05-25T04:00:00.000Z",
+    "curves": [
+        {
+            "curveName": "SOFR",
+            "curveConfig": {
+                "curveType": "Piecewise",
+                "dayCounter": "Actual360",
+                "enableExtrapolation": true,
+                "currency": "USD",
+                "rateHelpers": [
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "1D",
+                            "identifier": "SOFR_1D",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.1,
+                                "ticker": "SOFRRATE INDEX"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "1W",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_1W"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.050763,
+                                "ticker": "USOSFR1Z CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_1W"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "2W",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_2W"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.050781,
+                                "ticker": "USOSFR2Z CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_2W"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "3W",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_3W"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.051115,
+                                "ticker": "USOSFR3Z CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_3W"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "1M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_1M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.051529,
+                                "ticker": "USOSFRA CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_1M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "2M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_2M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.052113,
+                                "ticker": "USOSFRB CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_2M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "3M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_3M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.052706,
+                                "ticker": "USOSFRC CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_3M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "4M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_4M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.052976,
+                                "ticker": "USOSFRD CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_4M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "5M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_5M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.05314,
+                                "ticker": "USOSFRE CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_5M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "6M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_6M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.05303,
+                                "ticker": "USOSFRF CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_6M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "7M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_7M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.052868,
+                                "ticker": "USOSFRG CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_7M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "8M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_8M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.052655,
+                                "ticker": "USOSFRH CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_8M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "9M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_9M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.05231,
+                                "ticker": "USOSFRI CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_9M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "10M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_10M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.05201,
+                                "ticker": "USOSFRJ CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_10M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "11M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_11M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.05157,
+                                "ticker": "USOSFRK CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_11M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "12M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_12M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.051065,
+                                "ticker": "USOSFR1 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_12M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "18M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_18M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.047008,
+                                "ticker": "USOSFR1F CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_18M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "2Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_2Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.043893,
+                                "ticker": "USOSFR2 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_2Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "3Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_3Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.039935,
+                                "ticker": "USOSFR3 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_3Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "4Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_4Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.037898,
+                                "ticker": "USOSFR4 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_4Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "5Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_5Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.036768,
+                                "ticker": "USOSFR5 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_5Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "6Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_6Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.036102,
+                                "ticker": "USOSFR6 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_6Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "7Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_7Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.035665,
+                                "ticker": "USOSFR7 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_7Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "8Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_8Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.035403,
+                                "ticker": "USOSFR8 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_8Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "9Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_9Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.035265,
+                                "ticker": "USOSFR9 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_9Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "10Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_10Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03518,
+                                "ticker": "USOSFR10 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_10Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "12Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_12Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.035149,
+                                "ticker": "USOSFR12 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_12Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "15Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_15Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.035141,
+                                "ticker": "USOSFR15 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_15Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "20Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_20Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.034737,
+                                "ticker": "USOSFR20 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_20Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "25Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_25Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03374,
+                                "ticker": "USOSFR25 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_25Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "30Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_30Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03275,
+                                "ticker": "USOSFR30 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_30Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "40Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_40Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03073,
+                                "ticker": "USOSFR40 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_40Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "50Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Following",
+                            "endOfMonth": true,
+                            "frequency": "Annual",
+                            "settlementDays": 2,
+                            "paymentLag": 2,
+                            "telescopicValueDates": true,
+                            "index": "SOFR",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "SOFR_50Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.02875,
+                                "ticker": "USOSFR50 CURNCY"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_SOFR_50Y"
+                            }
+                        }
+                    }
+                ]
+            },
+            "curveIndex": {
+                "indexType": "OvernightIndex",
+                "tenor": "1D",
+                "dayCounter": "Actual360",
+                "currency": "USD",
+                "fixingDays": 0,
+                "calendar": "NullCalendar",
+                "endOfMonth": false,
+                "convention": "Unadjusted"
+            }
+        },
+        {
+            "curveName": "LIBOR3M",
+            "curveConfig": {
+                "curveType": "Piecewise",
+                "dayCounter": "Actual360",
+                "enableExtrapolation": true,
+                "currency": "USD",
+                "rateHelpers": [
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "1M",
+                            "identifier": "LIBOR3M_1M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.0516,
+                                "ticker": "US0001M INDEX"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "3M",
+                            "identifier": "LIBOR3M_3M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.0546314,
+                                "ticker": "US0003M INDEX"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "6M",
+                            "identifier": "LIBOR3M_6M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.0556414,
+                                "ticker": "US0006M INDEX"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "12M",
+                            "identifier": "LIBOR3M_12M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.0562257,
+                                "ticker": "US0012M INDEX"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "2Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_2Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.046742,
+                                "ticker": "USSWAP2 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_2Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "3Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_3Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.042782,
+                                "ticker": "USSWAP3 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_3Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "4Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_4Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.040738,
+                                "ticker": "USSWAP4 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_4Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "5Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_5Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.039617,
+                                "ticker": "USSWAP5 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_5Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "6Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_6Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03895,
+                                "ticker": "USSW6 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_6Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "7Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_7Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.038515,
+                                "ticker": "USSWAP7 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_7Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "8Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_8Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.038252,
+                                "ticker": "USSW8 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_8Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "9Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_9Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.038129,
+                                "ticker": "USSW9 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_9Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "10Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_10Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.038052,
+                                "ticker": "USSWAP10 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_10Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "11Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_11Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.038025,
+                                "ticker": "USSWAP11 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_11Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "12Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_12Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.038017,
+                                "ticker": "USSWAP12 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_12Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "15Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_15Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.038008,
+                                "ticker": "USSWAP15 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_15Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "20Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_20Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03761,
+                                "ticker": "USSWAP20 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_20Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "25Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_25Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.036622,
+                                "ticker": "USSWAP25 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_25Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "30Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_30Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.035628,
+                                "ticker": "USSWAP30 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_30Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "40Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_40Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.033609,
+                                "ticker": "USSWAP40 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_40Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Swap",
+                        "helperConfig": {
+                            "tenor": "50Y",
+                            "dayCounter": "Thirty360",
+                            "calendar": "NullCalendar",
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "LIBOR3M",
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "LIBOR3M_50Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03153,
+                                "ticker": "USSWAP50 BGN  Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_LIBOR3M_50Y"
+                            }
+                        }
+                    }
+                ]
+            },
+            "curveIndex": {
+                "indexType": "IborIndex",
+                "tenor": "3M",
+                "dayCounter": "Actual360",
+                "currency": "USD",
+                "fixingDays": 0,
+                "calendar": "NullCalendar",
+                "endOfMonth": false,
+                "convention": "Unadjusted"
+            }
+        },
+        {
+            "curveName": "CLP_COLLUSD",
+            "curveConfig": {
+                "curveType": "Piecewise",
+                "dayCounter": "Actual360",
+                "enableExtrapolation": true,
+                "currency": "CLP",
+                "rateHelpers": [
+                    {
+                        "helperType": "FxSwap",
+                        "helperConfig": {
+                            "tenor": "1W",
+                            "calendar": "NullCalendar",
+                            "fixingDays": 0,
+                            "endOfMonth": false,
+                            "baseCurrencyAsCollateral": true,
+                            "convention": "Unadjusted",
+                            "discountCurve": "SOFR",
+                            "settlementDays": 0,
+                            "identifier": "CLP_COLLUSD_1W"
+                        },
+                        "marketConfig": {
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            },
+                            "fxPoints": {
+                                "value": 0.87,
+                                "ticker": "CHN1W Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "FxSwap",
+                        "helperConfig": {
+                            "tenor": "2W",
+                            "calendar": "NullCalendar",
+                            "fixingDays": 0,
+                            "endOfMonth": false,
+                            "baseCurrencyAsCollateral": true,
+                            "convention": "Unadjusted",
+                            "discountCurve": "SOFR",
+                            "settlementDays": 0,
+                            "identifier": "CLP_COLLUSD_2W"
+                        },
+                        "marketConfig": {
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            },
+                            "fxPoints": {
+                                "value": 1.8,
+                                "ticker": "CHN2W Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "FxSwap",
+                        "helperConfig": {
+                            "tenor": "1M",
+                            "calendar": "NullCalendar",
+                            "fixingDays": 0,
+                            "endOfMonth": false,
+                            "baseCurrencyAsCollateral": true,
+                            "convention": "Unadjusted",
+                            "discountCurve": "SOFR",
+                            "settlementDays": 0,
+                            "identifier": "CLP_COLLUSD_1M"
+                        },
+                        "marketConfig": {
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            },
+                            "fxPoints": {
+                                "value": 4.35,
+                                "ticker": "CHN1M Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "FxSwap",
+                        "helperConfig": {
+                            "tenor": "2M",
+                            "calendar": "NullCalendar",
+                            "fixingDays": 0,
+                            "endOfMonth": false,
+                            "baseCurrencyAsCollateral": true,
+                            "convention": "Unadjusted",
+                            "discountCurve": "SOFR",
+                            "settlementDays": 0,
+                            "identifier": "CLP_COLLUSD_2M"
+                        },
+                        "marketConfig": {
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            },
+                            "fxPoints": {
+                                "value": 7.6,
+                                "ticker": "CHN2M Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "FxSwap",
+                        "helperConfig": {
+                            "tenor": "3M",
+                            "calendar": "NullCalendar",
+                            "fixingDays": 0,
+                            "endOfMonth": false,
+                            "baseCurrencyAsCollateral": true,
+                            "convention": "Unadjusted",
+                            "discountCurve": "SOFR",
+                            "settlementDays": 0,
+                            "identifier": "CLP_COLLUSD_3M"
+                        },
+                        "marketConfig": {
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            },
+                            "fxPoints": {
+                                "value": 10.9,
+                                "ticker": "CHN3M Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "FxSwap",
+                        "helperConfig": {
+                            "tenor": "4M",
+                            "calendar": "NullCalendar",
+                            "fixingDays": 0,
+                            "endOfMonth": false,
+                            "baseCurrencyAsCollateral": true,
+                            "convention": "Unadjusted",
+                            "discountCurve": "SOFR",
+                            "settlementDays": 0,
+                            "identifier": "CLP_COLLUSD_4M"
+                        },
+                        "marketConfig": {
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            },
+                            "fxPoints": {
+                                "value": 13.85,
+                                "ticker": "CHN4M Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "FxSwap",
+                        "helperConfig": {
+                            "tenor": "5M",
+                            "calendar": "NullCalendar",
+                            "fixingDays": 0,
+                            "endOfMonth": false,
+                            "baseCurrencyAsCollateral": true,
+                            "convention": "Unadjusted",
+                            "discountCurve": "SOFR",
+                            "settlementDays": 0,
+                            "identifier": "CLP_COLLUSD_5M"
+                        },
+                        "marketConfig": {
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            },
+                            "fxPoints": {
+                                "value": 16.75,
+                                "ticker": "CHN5M Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "FxSwap",
+                        "helperConfig": {
+                            "tenor": "6M",
+                            "calendar": "NullCalendar",
+                            "fixingDays": 0,
+                            "endOfMonth": false,
+                            "baseCurrencyAsCollateral": true,
+                            "convention": "Unadjusted",
+                            "discountCurve": "SOFR",
+                            "settlementDays": 0,
+                            "identifier": "CLP_COLLUSD_6M"
+                        },
+                        "marketConfig": {
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            },
+                            "fxPoints": {
+                                "value": 19.83,
+                                "ticker": "CHN6M Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "FxSwap",
+                        "helperConfig": {
+                            "tenor": "9M",
+                            "calendar": "NullCalendar",
+                            "fixingDays": 0,
+                            "endOfMonth": false,
+                            "baseCurrencyAsCollateral": true,
+                            "convention": "Unadjusted",
+                            "discountCurve": "SOFR",
+                            "settlementDays": 0,
+                            "identifier": "CLP_COLLUSD_9M"
+                        },
+                        "marketConfig": {
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            },
+                            "fxPoints": {
+                                "value": 26.03,
+                                "ticker": "CHN9M Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "FxSwap",
+                        "helperConfig": {
+                            "tenor": "12M",
+                            "calendar": "NullCalendar",
+                            "fixingDays": 0,
+                            "endOfMonth": false,
+                            "baseCurrencyAsCollateral": true,
+                            "convention": "Unadjusted",
+                            "discountCurve": "SOFR",
+                            "settlementDays": 0,
+                            "identifier": "CLP_COLLUSD_12M"
+                        },
+                        "marketConfig": {
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            },
+                            "fxPoints": {
+                                "value": 28.72,
+                                "ticker": "CHN12M Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "FxSwap",
+                        "helperConfig": {
+                            "tenor": "18M",
+                            "calendar": "NullCalendar",
+                            "fixingDays": 0,
+                            "endOfMonth": false,
+                            "baseCurrencyAsCollateral": true,
+                            "convention": "Unadjusted",
+                            "discountCurve": "SOFR",
+                            "settlementDays": 0,
+                            "identifier": "CLP_COLLUSD_18M"
+                        },
+                        "marketConfig": {
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            },
+                            "fxPoints": {
+                                "value": 36,
+                                "ticker": "CHN18M Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "2Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_2Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.00585,
+                                "ticker": "CHUSBS2 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_2Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "3Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_3Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.00335,
+                                "ticker": "CHUSBS3 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_3Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "4Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_4Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": -0.0001,
+                                "ticker": "CHUSBS4 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_4Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "5Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_5Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": -0.0013,
+                                "ticker": "CHUSBS5 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_5Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "6Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_6Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": -0.0014,
+                                "ticker": "CHUSBS6 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_6Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "7Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_7Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": -0.00205,
+                                "ticker": "CHUSBS7 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_7Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "8Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_8Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": -0.00265,
+                                "ticker": "CHUSBS8 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_8Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "9Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_9Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": -0.0031,
+                                "ticker": "CHUSBS9 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_9Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "10Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_10Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": -0.00335,
+                                "ticker": "CHUSBS10 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_10Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "15Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_15Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": -0.0026,
+                                "ticker": "CHUSBS15 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_15Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "20Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_20Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": -0.002,
+                                "ticker": "CHUSBS20 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_20Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "25Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_25Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": -0.00185,
+                                "ticker": "CHUSBS25 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_25Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Xccy",
+                        "helperConfig": {
+                            "tenor": "30Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": false,
+                            "settlementDays": 2,
+                            "discountCurve": "SOFR",
+                            "index": "SOFR",
+                            "fixedLegCurrency": "CLP",
+                            "fwdStart": "0D",
+                            "fixedLegFrequency": "Semiannual",
+                            "identifier": "CLP_COLLUSD_30Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": -0.0014,
+                                "ticker": "CHUSBS30 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_CLP_COLLUSD_30Y"
+                            },
+                            "fxSpot": {
+                                "value": 806.83,
+                                "ticker": "CLP CURNCY"
+                            }
+                        }
+                    }
+                ]
+            },
+            "curveIndex": {
+                "indexType": "OvernightIndex",
+                "tenor": "1D",
+                "dayCounter": "Actual360",
+                "currency": "USD",
+                "fixingDays": 0,
+                "calendar": "NullCalendar",
+                "endOfMonth": false,
+                "convention": "Unadjusted"
+            }
+        },
+        {
+            "curveName": "ICP",
+            "curveConfig": {
+                "curveType": "Piecewise",
+                "dayCounter": "Actual360",
+                "enableExtrapolation": true,
+                "currency": "CLP",
+                "rateHelpers": [
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "1D",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "identifier": "ICP_1D"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.1125,
+                                "ticker": "CHOVCHOV Index"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "2M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "identifier": "ICP_2M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.1132,
+                                "ticker": "CHSWPB ICCH Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "3M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "identifier": "ICP_3M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.1131,
+                                "ticker": "CHSWPC ICCH Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "6M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "identifier": "ICP_6M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.1097,
+                                "ticker": "CHSWPF ICCH Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "9M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "identifier": "ICP_9M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.1043,
+                                "ticker": "CHSWPI ICCH Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "12M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "identifier": "ICP_12M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.09825,
+                                "ticker": "CHSWP1 ICCH Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "18M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "identifier": "ICP_18M"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.0879,
+                                "ticker": "CHSWP1F ICCH Curncy"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "2Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_2Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.0763,
+                                "ticker": "CHSWP2 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_2Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "3Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_3Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.06595,
+                                "ticker": "CHSWP3 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_3Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "4Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_4Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.06065,
+                                "ticker": "CHSWP4 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_4Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "5Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_5Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.0577,
+                                "ticker": "CHSWP5 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_5Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "6Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_6Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.05605,
+                                "ticker": "CHSWP6 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_6Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "7Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_7Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.05495,
+                                "ticker": "CHSWP7 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_7Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "8Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_8Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.0543,
+                                "ticker": "CHSWP8 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_8Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "9Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_9Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.05375,
+                                "ticker": "CHSWP9 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_9Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "10Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_10Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.0537,
+                                "ticker": "CHSWP10 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_10Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "15Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_15Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.05425,
+                                "ticker": "CHSWP15 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_15Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "20Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_20Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.05455,
+                                "ticker": "CHSWP20 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_20Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "25Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_25Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.05435,
+                                "ticker": "CHSWP25 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_25Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "OIS",
+                        "helperConfig": {
+                            "tenor": "30Y",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "convention": "Unadjusted",
+                            "endOfMonth": true,
+                            "frequency": "Semiannual",
+                            "settlementDays": 2,
+                            "paymentLag": 0,
+                            "telescopicValueDates": true,
+                            "discountCurve": "CLP_COLLUSD",
+                            "index": "ICP",
+                            "fixedLegFrequency": "Semiannual",
+                            "fwdStart": "0D",
+                            "identifier": "ICP_30Y"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.054,
+                                "ticker": "CHSWP30 ICCH Curncy"
+                            },
+                            "spread": {
+                                "value": 0,
+                                "ticker": "SPREAD_ICP_30Y"
+                            }
+                        }
+                    }
+                ]
+            },
+            "curveIndex": {
+                "indexType": "OvernightIndex",
+                "tenor": "1D",
+                "dayCounter": "Actual360",
+                "currency": "USD",
+                "fixingDays": 0,
+                "calendar": "NullCalendar",
+                "endOfMonth": false,
+                "convention": "Unadjusted"
+            }
+        },
+        {
+            "curveName": "CF_CLP_PASIVO",
+            "curveConfig": {
+                "curveType": "Piecewise",
+                "dayCounter": "Actual360",
+                "enableExtrapolation": true,
+                "currency": "CLP",
+                "rateHelpers": [
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "7D",
+                            "identifier": "CF_CLP_PASIVO_7D",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_7D"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "14D",
+                            "identifier": "CF_CLP_PASIVO_14D",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_14D"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "1M",
+                            "identifier": "CF_CLP_PASIVO_1M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_1M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "2M",
+                            "identifier": "CF_CLP_PASIVO_2M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_2M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "3M",
+                            "identifier": "CF_CLP_PASIVO_3M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_3M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "4M",
+                            "identifier": "CF_CLP_PASIVO_4M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.031,
+                                "ticker": "CF_CLP_PASIVO_4M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "5M",
+                            "identifier": "CF_CLP_PASIVO_5M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.035,
+                                "ticker": "CF_CLP_PASIVO_5M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "6M",
+                            "identifier": "CF_CLP_PASIVO_6M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.032,
+                                "ticker": "CF_CLP_PASIVO_6M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "7M",
+                            "identifier": "CF_CLP_PASIVO_7M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.033,
+                                "ticker": "CF_CLP_PASIVO_7M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "8M",
+                            "identifier": "CF_CLP_PASIVO_8M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.035,
+                                "ticker": "CF_CLP_PASIVO_8M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "9M",
+                            "identifier": "CF_CLP_PASIVO_9M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.036,
+                                "ticker": "CF_CLP_PASIVO_9M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "10M",
+                            "identifier": "CF_CLP_PASIVO_10M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_10M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "11M",
+                            "identifier": "CF_CLP_PASIVO_11M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_11M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "12M",
+                            "identifier": "CF_CLP_PASIVO_12M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_12M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "13M",
+                            "identifier": "CF_CLP_PASIVO_13M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_13M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Deposit",
+                        "helperConfig": {
+                            "tenor": "18M",
+                            "identifier": "CF_CLP_PASIVO_18M",
+                            "dayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_18M"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Bond",
+                        "helperConfig": {
+                            "tenor": "2Y",
+                            "identifier": "CF_CLP_PASIVO_2Y",
+                            "couponRate": 0.03,
+                            "couponDayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "frequency": "Semiannual"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_2Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Bond",
+                        "helperConfig": {
+                            "tenor": "3Y",
+                            "identifier": "CF_CLP_PASIVO_3Y",
+                            "couponRate": 0.03,
+                            "couponDayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "frequency": "Semiannual"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_3Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Bond",
+                        "helperConfig": {
+                            "tenor": "4Y",
+                            "identifier": "CF_CLP_PASIVO_4Y",
+                            "couponRate": 0.03,
+                            "couponDayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "frequency": "Semiannual"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_4Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Bond",
+                        "helperConfig": {
+                            "tenor": "5Y",
+                            "identifier": "CF_CLP_PASIVO_5Y",
+                            "couponRate": 0.03,
+                            "couponDayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "frequency": "Semiannual"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_5Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Bond",
+                        "helperConfig": {
+                            "tenor": "7Y",
+                            "identifier": "CF_CLP_PASIVO_7Y",
+                            "couponRate": 0.03,
+                            "couponDayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "frequency": "Semiannual"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.03,
+                                "ticker": "CF_CLP_PASIVO_7Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Bond",
+                        "helperConfig": {
+                            "tenor": "10Y",
+                            "identifier": "CF_CLP_PASIVO_10Y",
+                            "couponRate": 0.03,
+                            "couponDayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "frequency": "Semiannual"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.031,
+                                "ticker": "CF_CLP_PASIVO_10Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Bond",
+                        "helperConfig": {
+                            "tenor": "12Y",
+                            "identifier": "CF_CLP_PASIVO_12Y",
+                            "couponRate": 0.03,
+                            "couponDayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "frequency": "Semiannual"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.035,
+                                "ticker": "CF_CLP_PASIVO_12Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Bond",
+                        "helperConfig": {
+                            "tenor": "15Y",
+                            "identifier": "CF_CLP_PASIVO_15Y",
+                            "couponRate": 0.03,
+                            "couponDayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "frequency": "Semiannual"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.032,
+                                "ticker": "CF_CLP_PASIVO_15Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Bond",
+                        "helperConfig": {
+                            "tenor": "20Y",
+                            "identifier": "CF_CLP_PASIVO_20Y",
+                            "couponRate": 0.03,
+                            "couponDayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "frequency": "Semiannual"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.033,
+                                "ticker": "CF_CLP_PASIVO_20Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Bond",
+                        "helperConfig": {
+                            "tenor": "25Y",
+                            "identifier": "CF_CLP_PASIVO_25Y",
+                            "couponRate": 0.03,
+                            "couponDayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "frequency": "Semiannual"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.035,
+                                "ticker": "CF_CLP_PASIVO_25Y"
+                            }
+                        }
+                    },
+                    {
+                        "helperType": "Bond",
+                        "helperConfig": {
+                            "tenor": "30Y",
+                            "identifier": "CF_CLP_PASIVO_30Y",
+                            "couponRate": 0.03,
+                            "couponDayCounter": "Actual360",
+                            "calendar": "NullCalendar",
+                            "settlementDays": 0,
+                            "endOfMonth": false,
+                            "convention": "Unadjusted",
+                            "frequency": "Semiannual"
+                        },
+                        "marketConfig": {
+                            "rate": {
+                                "value": 0.036,
+                                "ticker": "CF_CLP_PASIVO_30Y"
+                            }
+                        }
+                    }
+                ]
+            },
+            "curveIndex": {
+                "indexType": "IborIndex",
+                "tenor": "3M",
+                "dayCounter": "Actual360",
+                "currency": "CLP",
+                "fixingDays": 0,
+                "calendar": "NullCalendar",
+                "endOfMonth": false,
+                "convention": "Unadjusted"
+            }
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+deployType: eks
+ecsData:
+eksData:
+  image: "itauclbfftesoreriaempresa"
+  image_version: "1.0.1"
+  app_version: "1.0.1"
+  env:
+    development:
+      account: "660372168275"
+      cluster_name: "eks-dev-bff-nv"
+      cluster_region: "us-east-1"
+      secrets:
+        secret1: 
+          secret_name: "APIKey/dev/inner/bcl/tesoreria"
+        secret2: 
+          secret_name: "APIKey/dev/inner/acl/tesoreria"
+    quality:
+      account: "970733212581"
+      cluster_name: "eks-qa-bff-nv"
+      cluster_region: "us-east-1"
+      secrets:
+        secret1: 
+          secret_name: "APIKey/qa/inner/bcl/tesoreria"
+        secret2: 
+          secret_name: "APIKey/qa/inner/acl/tesoreria"
+    production:
+      account: "055342247576"
+      cluster_name: "eks-prd-bff-nv"
+      cluster_region: "us-east-1"
+      secrets:
+        secret1: 
+          secret_name: "APIKey/prod/inner/bcl/tesoreria"
+        secret2: 
+          secret_name: "APIKey/prod/inner/acl/tesoreria"  
