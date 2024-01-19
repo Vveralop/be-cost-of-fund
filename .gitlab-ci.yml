@@ -1,0 +1,7 @@
+include: 
+  - project: 'iac/pipeline-gitlab-templates'
+    ref: production
+    file: 'pipeline_ms_template.yaml'
+
+variables:
+  TEST_DRY_RUN: "false"

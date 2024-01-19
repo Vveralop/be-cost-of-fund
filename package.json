@@ -1,123 +1,77 @@
 {
-  "name": "cost-of-fund",
-  "version": "0.0.1",
-  "description": "Cost of Fund's Api Rest",
-  "author": "Vveral",
-  "license": "MIT",
-  "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "nest build",
-    "format": "prettier --write \"{src,test}/**/*.ts\"",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
-    "start:watch": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
-    "start:online": "cross-env IS_DDB_LOCAL= nest start",
-    "deploy": "sls deploy --verbose",
-    "package": "sls package",
-    "lint": "eslint \"{src,test}/**/*.ts\" --max-warnings 0",
-    "test": "jest --verbose",
-    "test:watch": "jest --verbose --watch",
-    "test:cov": "jest --verbose --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
-    "ddb:install": "sls dynamodb install",
-    "ddb:start": "sls dynamodb start",
-    "sls:offline": "cross-env NO_COLOR= sls offline",
-    "sls:online": "cross-env NO_COLOR= cross-env IS_DDB_LOCAL= sls offline"
-  },
+  "name": "pm-dashboard-performance",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@nestjs/apollo": "12.0.7",
-    "@nestjs/common": "10.0.5",
-    "@nestjs/config": "3.0.0",
-    "@nestjs/core": "10.0.5",
-    "@nestjs/platform-express": "10.0.5",
-    "@nestjs/swagger": "^7.1.1",
-    "@vendia/serverless-express": "4.10.4",
-    "class-transformer": "0.5.1",
-    "class-validator": "0.14.0",
-    "dynamoose": "^3.2.0",
-    "husky": "8.0.3",
-    "luxon": "^3.3.0",
-    "nestjs-dynamoose": "0.5.5",
-    "nestjs-pino": "^3.3.0",
-    "pino-pretty": "^10.2.0",
-    "reflect-metadata": "0.1.13",
-    "rimraf": "5.0.1",
-    "rxjs": "7.8.1",
-    "uuid": "9.0.0"
+    "@ant-design/colors": "^6.0.0",
+    "@ant-design/icons": "^4.7.0",
+    "@azure/msal-browser": "^2.37.0",
+    "@azure/msal-react": "1.5.7",
+    "@base2/pretty-print-object": "^1.0.2",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@hookform/resolvers": "3.1.1",
+    "@itau-one/core": "^1.0.4",
+    "@itau-one/icons": "^1.0.1",
+    "@itau-one/react": "^1.1.12",
+    "@mui/icons-material": "^5.10.2",
+    "@mui/lab": "^5.0.0-alpha.149",
+    "@mui/material": "^5.10.2",
+    "@mui/x-date-pickers": "6.18.2",
+    "@mui/x-date-pickers-pro": "6.18.2",
+    "@reduxjs/toolkit": "1.9.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "1.4.0",
+    "chart.js": "^4.4.0",
+    "date-fns": "2.30.0",
+    "feather-icons-react": "0.6.2",
+    "formik": "^2.2.9",
+    "framer-motion": "^7.2.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-device-detect": "^2.2.2",
+    "react-dom": "^18.2.0",
+    "react-element-to-jsx-string": "15.0.0",
+    "react-helmet": "6.1.0",
+    "react-hook-form": "7.44.3",
+    "react-number-format": "5.2.2",
+    "react-router-dom": "^6.13.0",
+    "react-rut-formatter": "^0.2.2",
+    "react-scripts": "5.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "redux-logger": "^3.0.6",
+    "redux-persist-transform-encrypt": "^5.0.0",
+    "reduxjs-toolkit-persist": "^7.2.1",
+    "simplebar-react": "^2.4.1",
+    "web-vitals": "^2.1.4",
+    "yup": "0.32.11"
   },
-  "devDependencies": {
-    "@commitlint/cli": "17.6.6",
-    "@commitlint/config-conventional": "17.6.6",
-    "@nestjs/cli": "10.1.8",
-    "@nestjs/schematics": "10.0.1",
-    "@nestjs/testing": "10.0.5",
-    "@shelf/jest-dynamodb": "3.4.1",
-    "@trivago/prettier-plugin-sort-imports": "4.1.1",
-    "@types/aws-lambda": "8.10.119",
-    "@types/express": "4.17.17",
-    "@types/jest": "29.5.3",
-    "@types/js-yaml": "4.0.5",
-    "@types/luxon": "^3.3.0",
-    "@types/node": "16.18.38",
-    "@types/serverless": "3.12.13",
-    "@types/supertest": "2.0.12",
-    "@types/uuid": "9.0.2",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "change-case": "4.1.2",
-    "cross-env": "7.0.3",
-    "eslint": "^8.44.0",
-    "eslint-config-prettier": "8.8.0",
-    "eslint-plugin-import": "2.27.5",
-    "glob-promise": "6.0.3",
-    "jest": "29.6.1",
-    "js-yaml": "4.1.0",
-    "lint-staged": "13.2.3",
-    "prettier": "2.8.8",
-    "serverless": "3.33.0",
-    "serverless-dynamodb-local": "0.2.40",
-    "serverless-offline": "12.0.4",
-    "serverless-plugin-typescript": "2.1.5",
-    "supertest": "6.3.3",
-    "ts-jest": "29.1.1",
-    "ts-loader": "9.4.4",
-    "ts-node": "10.9.1",
-    "tsconfig-paths": "4.2.0",
-    "typescript": "5.1.6"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "jest": {
-    "preset": "@shelf/jest-dynamodb",
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "ts"
-    ],
-    "rootDir": "src",
-    "testRegex": ".spec.ts$",
-    "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
-    },
-    "coverageDirectory": "../coverage",
-    "testEnvironment": "node",
-    "testTimeout": 45000
-  },
-  "lint-staged": {
-    "*.ts": [
-      "prettier --write"
-    ]
-  },
-  "commitlint": {
+  "eslintConfig": {
     "extends": [
-      "@commitlint/config-conventional"
+      "react-app",
+      "react-app/jest"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

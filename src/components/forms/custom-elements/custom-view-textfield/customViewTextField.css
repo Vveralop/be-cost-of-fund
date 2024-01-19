@@ -1,0 +1,35 @@
+/* CustomViewTextField.css */
+.custom-view-textfield {
+    position: relative;
+}
+
+.select-header{
+    padding: 10px;
+    border: 1px solid #89837F;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.select-header:hover{   
+    border: 1px solid #EC7000;
+}
+
+.select-header.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.select-label{
+    position: absolute;
+    background-color: #FFFFFF;
+    top: -8px; /* adjust this value to position it properly */
+    left: 10px;
+    font-size: 12px; /* adjust the font size as needed */
+    color: #231D19; /* adjust the color as needed */
+    pointer-events: none; /* Prevent label clicks */
+}
+

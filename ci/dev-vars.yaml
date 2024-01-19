@@ -1,8 +1,8 @@
-project:
+project: 
   language: Javascript
   framework:
-    name: "NestJs"
-    version: 8
+    name: "ReactJs"
+    version: 18.2.0
   mainFile: "package.json"
   unitTestFramework: "NUnit"
   unitTestFolder: ""

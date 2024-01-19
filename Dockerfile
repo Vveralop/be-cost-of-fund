@@ -1,42 +1,54 @@
-FROM node:16-alpine AS base
+# Stage 1: Build the React app
+FROM node:alpine3.16 AS build
 
-RUN apk add --no-cache git curl
-RUN apk add openssl
+WORKDIR /app
 
-ADD http://gitlab.itauchile.cl/architecture-center-of-excellence/api-connect/certificates/-/raw/main/itauchile/CAPrivate.crt "/usr/local/share/ca-certificates/CAPrivate.crt"
-#RUN echo CAPrivate.crt >> /etc/ssl/certs/ca-certificates.conf && update-ca-certificates
-WORKDIR /usr/local/share/ca-certificates/
-RUN head -29 /usr/local/share/ca-certificates/CAPrivate.crt > ca_1.crt
-RUN sed -n 30,50p /usr/local/share/ca-certificates/CAPrivate.crt > ca_2.crt
-RUN rm -r /usr/local/share/ca-certificates/CAPrivate.crt
-RUN update-ca-certificates
-ADD http://gitlab.itauchile.cl/architecture-center-of-excellence/api-connect/certificates/-/raw/main/itauchile/CAPrivate.crt "/usr/local/share/ca-certificates/CAPrivate.crt"
-RUN openssl x509 -in /usr/local/share/ca-certificates/ca_1.crt -out /usr/local/share/ca-certificates/ca.pem
-RUN openssl x509 -in /usr/local/share/ca-certificates/ca_2.crt -out /usr/local/share/ca-certificates/cert.pem
-FROM base AS development
-
-WORKDIR /usr/src/app
+# Copy package.json and package-lock.json
 COPY package*.json ./
-#RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-#RUN unzip awscliv2.zip
-#RUN ./aws/install
-RUN npm install --only=development --loglevel verbose
 
+# config for install dependencies from itau-one
+RUN npm set strict-ssl false
 
-FROM development AS builder
+# Install dependencies
+RUN npm ci
 
+# Copy the rest of the app files
 COPY . .
+
+# Build the React app
 RUN npm run build
 
-FROM base AS production
+# Stage 2: Serve the app using Nginx
+FROM nginx:alpine3.17
 
-ARG NODE_ENV=production
-ENV NODE_ENV=${NODE_ENV}
-WORKDIR /usr/src/app
-COPY package*.json ./
-RUN npm install --only=production
+ADD ./config/default.conf /etc/nginx/conf.d/default.conf
 
-COPY . .
-COPY --from=builder /usr/src/app/dist ./dist
-CMD ["node", "dist/main"]
+# Copy the build artifacts from the previous stage
+COPY --from=build /app/build /usr/share/nginx/html
 
+# Expose port 8082
+EXPOSE 8082
+
+# Copy .env file and shell script to container
+WORKDIR /usr/share/nginx/html
+
+#ENV REACT_APP_BASE_URL=${REACT_APP_BASE_URL}
+#ENV REACT_APP_CLIENT_ID=${REACT_APP_CLIENT_ID}
+#ENV REACT_APP_JWT_SECRET=${REACT_APP_JWT_SECRET}
+#ENV REACT_APP_ENV_STATUS=${REACT_APP_ENV_STATUS}
+#ENV PORT=${PORT}
+
+# Copy .env file and shell script to container
+#WORKDIR /usr/share/nginx/html
+
+COPY --from=build /app/env.sh .
+COPY --from=build /app/.environment .
+
+# Add bash
+RUN apk add --no-cache bash
+
+# Make our shell script executable
+RUN chmod a+x env.sh
+
+# Start Nginx server
+CMD ["/bin/bash", "-c", "/usr/share/nginx/html/env.sh && nginx -g \"daemon off;\""]

@@ -1,15 +1,16 @@
 replicaCount: 1
 
-serviceAccount: currency-exchange-pj-dev-sa
+serviceAccount: tesopro-dev-sa
 
 volumes:
   list:
   - name: secrets-store-inline
-    csi:
+    csi: 
       driver: secrets-store.csi.k8s.io
       readOnly: true
       volumeAttributes:
-        secretProviderClass: "secrets-provider-currency-exchange-pj"
+        secretProviderClass: secrets-provider-tesopro-front
+
 
 nameOverride: ""
 fullnameOverride: ""
@@ -25,13 +26,12 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-
 container:
   image:
     pullPolicy: Always
   ports:
     - name: http
-      containerPort: 3010
+      containerPort: 8082
       protocol: TCP
   volumeMounts:
     list:
@@ -42,40 +42,26 @@ container:
 vars:
   enabled: true
   list:
+    - name: REACT_APP_BASE_URL
+      value: https://gw.dev.apis.itau.cl/channels/collaborators/tesoreria/v1
+    - name: REACT_APP_CLIENT_ID
+      valueFrom:
+        secretKeyRef:
+          name: secrets-dev-bff-tesopro-front
+          key: collaborator-apiclient
+    - name: REACT_APP_CLIENT_SECRET
+      valueFrom:
+        secretKeyRef:
+          name: secrets-dev-bff-tesopro-front
+          key: collaborator-apisecret
+    - name: REACT_APP_AUTHORITY_URL
+      value: https://login.microsoftonline.com/9f4ba6d4-caa0-4b65-bbc9-687b3123882b
+    - name: REACT_APP_AD_CLIENT_ID
+      value: 81edadcd-bd3a-42b0-9464-58f701e9b7fd
+    - name: REACT_APP_ENV_STATUS
+      value: OK
     - name: PORT
-      value: "3010"
-    - name: LOGGER_LEVEL
-      value: "trace"
-    - name: NODE_OPTIONS
-      value: "--use-openssl-ca"
-    - name: PATH_INNER_BCL
-      value: "https://gw.dev.apis.itau.cl/inner/bcl/currency-exchange/v1"
-    - name: INNER_BCL_CLIENT_ID
-      value: "890e6577f2f1a941032215ea63b63a1d"
-    - name: ENVIRONMENT
-      value: "dev"
-    - name: TYPE
-      value: "bff"
-    - name: COMPONENT
-      value: "bff-currency-exchange-pj: 0.0.1"
-    - name: APP_ID
-      value: "2198"
-    - name: INNER_BCL_CLIENT_SECRET
-      valueFrom:
-        secretKeyRef:
-          name: secrets-dev-bff-currency-exchange-pj
-          key: bcl-apikey
-    - name: PATH_INNER_ACL
-      value: "https://apiindes.itauchile.cl/inner/acl/currency-exchange-forex/v1/search-historical-records/execute/"
-    - name: APPLICATIONS
-      value: "PORTAL" 
-    - name: INNER_ACL_CLIENT_ID
-      value: "4c5b00d836475ae67de990c51cdc2bbc"
-    - name: INNER_ACL_CLIENT_SECRET
-      valueFrom:
-        secretKeyRef:
-          name: secrets-dev-bff-currency-exchange-pj
-          key: acl-apikey
+      value: "8082"
 
 secrets:
 
@@ -95,9 +81,9 @@ readinessProbe:
   initialDelaySeconds: 5
   periodSeconds: 10
 
-service: #PR-PREGUNTAR a CLOUDOPS
+service:
   type: ClusterIP
-  port: 3010 
+  port: 8082
 
 ingress:
   ingressClassName: ingress-internal
@@ -105,23 +91,30 @@ ingress:
   annotations:
     alb.ingress.kubernetes.io/target-type: 'ip'
     alb.ingress.kubernetes.io/scheme: internal
-    alb.ingress.kubernetes.io/group.name: alb-dev-bff-priv
+    alb.ingress.kubernetes.io/group.name: alb-dev-front-priv
     alb.ingress.kubernetes.io/healthchek-path: /health
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/actions.ssl-redirect: '{"Type": "redirect", "RedirectConfig": { "Protocol": "HTTPS", "Port": "443", "StatusCode": "HTTP_301"}}'
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:us-east-1:660372168275:certificate/f9243334-6e1f-438a-bb35-14f1a9b9cb20
+    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: https
   rules:
-    host: bfftesoreriapj-2109.bff-dev-ms.clouditauchile.cl
-    path: "/"
+    host: tesopro-3860.front-dev-ms.clouditauchile.cl
+    path: "/"   
 
 resources:
   limits:
     cpu: 270m
     memory: 479Mi
   requests:
-    cpu: 103m
     memory: 220Mi
+    cpu: 103m
 
 autoscaling:
   enabled: true
   minReplicas: 1
   maxReplicas: 2
-  targetCPUUtilizationPercentage: 60
-  #targetMemoryUtilizationPercentage: 70
+  targetCPUUtilizationPercentage: 70
+
+istio:
+  enableSidecarInjection: true

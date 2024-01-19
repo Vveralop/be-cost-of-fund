@@ -1,0 +1,14 @@
+@import "@itau-one/core/dist/tokens/css/variables.css";
+@import "@itau-one/core/dist/css/core.css";
+
+.OneSelect-module_itauOne__select__cont__options__8Zzto {
+    z-index: 5555;
+}
+
+[data-testid="itau-one__select__cont__options"]{
+    z-index:5555 !important;
+}
+
+ul .options {
+    z-index:100 !important;
+}

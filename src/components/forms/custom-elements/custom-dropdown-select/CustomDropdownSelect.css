@@ -1,0 +1,66 @@
+/* CustomDropdownSelect.css */
+.custom-dropdown-select {
+    position: relative;
+}
+
+.select-header{
+    padding: 10px;
+    border: 1px solid #89837F;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.select-header:hover{   
+    border: 1px solid #EC7000;
+}
+
+.select-header.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.select-label{
+    position: absolute;
+    background-color: #FFFFFF;
+    top: -8px; /* adjust this value to position it properly */
+    left: 10px;
+    font-size: 12px; /* adjust the font size as needed */
+    color: #231D19; /* adjust the color as needed */
+    pointer-events: none; /* Prevent label clicks */
+
+
+
+}
+
+.arrow-icon{
+    height: 32px;
+    width: 32px;
+}
+
+.options {
+    position:absolute;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color:#fff;
+    list-style: none;
+    padding: 0;
+    margin:0;
+    max-height: 150px;
+    overflow-y: auto;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    z-index: 3;
+}
+
+.options li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.options li:hover {
+    background-color: #f0f0f0;
+}
